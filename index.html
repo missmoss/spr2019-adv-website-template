@@ -35,11 +35,19 @@
             data: {
                 url: 'wtid_avg_icm.csv'
             },
+            vconcat: [ {
             mark: 'line',
             encoding: {
                 x: {field: 'year', type: 'temporal'},
                 y: {field: 'avg_per_unit', type: 'quantitative'}
+            }},
+            {
+            mark: 'line',
+            encoding: {
+                x: {field: 'year', type: 'temporal'},
+                y: {field: 'top10', type: 'quantitative'}
             }
+            }]
         };
         vegaEmbed('#vis', yourVlSpec);
     </script>
